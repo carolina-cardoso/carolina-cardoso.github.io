@@ -29,6 +29,35 @@ body{
   padding:24px 20px 60px;
 }
 
+.slider{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding-bottom:12px;
+}
+
+.slider::-webkit-scrollbar{
+  height:8px;
+}
+.slider::-webkit-scrollbar-thumb{
+  background:#444;
+}
+
+.slider img{
+  height:300px;
+  border-radius:12px;
+  transition:.2s;
+  cursor:pointer;
+}
+
+.slider img:hover{
+  transform:scale(1.03);
+}
+
+.slider.horizontal img{
+  height:200px;
+}
+  
 /* ---------- NAV ---------- */
 nav{
   display:flex;
@@ -168,30 +197,35 @@ footer{
 
         <!-- Replace shortcode in project pages & link each card to a project page -->
         <a href="project1.html" class="card tall">
-          <div class="media"><img src="https://via.placeholder.com/300x600.png?text=IG+Video+1"></div>
+          <div class="media"><img src="thumbnails/thumb-v1.jpg"></a>
           <div class="meta"><div class="title">Instagram Video 1</div><div class="role">Producer / Editor</div></div>
         </a>
 
         <a href="project2.html" class="card tall">
-          <div class="media"><img src="https://via.placeholder.com/300x600.png?text=IG+Video+2"></div>
+          <div class="media"><img src="thumbnails/thumb-v2.jpg"></a>
           <div class="meta"><div class="title">Instagram Video 2</div><div class="role">Producer</div></div>
         </a>
 
         <a href="project3.html" class="card tall">
-          <div class="media"><img src="https://via.placeholder.com/300x600.png?text=IG+Video+3"></div>
+          <div class="media"><img src="thumbnails/thumb-v3.jpg"></a>
           <div class="meta"><div class="title">Instagram Video 3</div><div class="role">Editor</div></div>
         </a>
 
         <a href="project4.html" class="card tall">
-          <div class="media"><img src="https://via.placeholder.com/300x600.png?text=IG+Video+4"></div>
+          <div class="media"><img src="thumbnails/thumb-v4.jpg"></a>
           <div class="meta"><div class="title">Instagram Video 4</div><div class="role">Producer</div></div>
         </a>
 
         <a href="project5.html" class="card tall">
-          <div class="media"><img src="https://via.placeholder.com/300x600.png?text=IG+Video+5"></div>
+          <div class="media"><img src="thumbnails/thumb-v5.jpg"></a>
           <div class="meta"><div class="title">Instagram Video 5</div><div class="role">Producer</div></div>
         </a>
 
+        <a href="project5.html" class="card tall">
+          <div class="media"><img src="thumbnails/thumb-v6.jpg"></a>
+          <div class="meta"><div class="title">Instagram Video 5</div><div class="role">Producer</div></div>
+        </a>
+        
       </div>
     </div>
 
@@ -209,23 +243,13 @@ footer{
       <div class="scroll-row" id="yt-row">
 
         <a href="project6.html" class="card">
-          <div class="media"><img src="https://via.placeholder.com/640x360?text=YouTube+1"></div>
+          <div class="media"><img src="thumbnails/thumb-h1.jpg"></a>
           <div class="meta"><div class="title">YouTube Video 1</div><div class="role">Producer</div></div>
         </a>
 
         <a href="project7.html" class="card">
-          <div class="media"><img src="https://via.placeholder.com/640x360?text=YouTube+2"></div>
+          <div class="media"><img src="thumbnails/thumb-h2.jpg"></a>
           <div class="meta"><div class="title">YouTube Video 2</div><div class="role">Producer</div></div>
-        </a>
-
-        <a href="project8.html" class="card">
-          <div class="media"><img src="https://via.placeholder.com/640x360?text=YouTube+3"></div>
-          <div class="meta"><div class="title">YouTube Video 3</div><div class="role">Producer</div></div>
-        </a>
-
-        <a href="project9.html" class="card">
-          <div class="media"><img src="https://via.placeholder.com/640x360?text=YouTube+4"></div>
-          <div class="meta"><div class="title">YouTube Video 4</div><div class="role">Producer</div></div>
         </a>
 
       </div>
@@ -247,3 +271,4 @@ function scrollRow(id, amount){
 
 </body>
 </html>
+
