@@ -56,7 +56,9 @@ nav .name a{
   color:var(--next);
 }
 
-nav .name a:hover{ opacity:.8; }
+nav .name a:hover{
+  opacity:.8;
+}
 
 nav ul{
   list-style:none;
@@ -74,11 +76,10 @@ nav a{
 
 nav a:hover{ color:var(--accent); }
 
-
-/* -------- LAYOUT -------- */
+/* -------- LAYOUT (EXACT MATCH TO PROJECT 1) -------- */
 .project{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:380px 1fr;
   gap:56px;
   align-items:start;
   margin-top:120px;
@@ -87,7 +88,7 @@ nav a:hover{ color:var(--accent); }
 /* -------- VIDEO -------- */
 .video{
   width:100%;
-  aspect-ratio:16/9;
+  aspect-ratio:9/16;
   border-radius:14px;
   overflow:hidden;
   background:black;
@@ -115,13 +116,11 @@ nav a:hover{ color:var(--accent); }
   margin-bottom:14px;
 }
 
-
-/* -------- PROJECT NAV -------- */
-.project-nav{
+/* -------- NAVIGATION -------- */
+.nav-projects{
   margin-top:72px;
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
 
 .nav-link{
@@ -133,7 +132,7 @@ nav a:hover{ color:var(--accent); }
   transition:.18s ease;
 }
 
-.nav-link:hover{
+.nav-link.next:hover{
   transform:translateX(6px);
 }
 
@@ -152,7 +151,6 @@ nav a:hover{ color:var(--accent); }
   line-height:1;
 }
 
-
 /* -------- MOBILE -------- */
 @media(max-width:900px){
 
@@ -167,7 +165,7 @@ nav a:hover{ color:var(--accent); }
   }
 
   .video{
-    max-width:100%;
+    max-width:360px;
     margin:auto;
   }
 
@@ -179,12 +177,10 @@ nav a:hover{ color:var(--accent); }
     font-size:36px;
   }
 
-  .project-nav{
+  .nav-projects{
     justify-content:space-between;
-    gap:48px;
   }
 }
-
 
 /* -------- FOOTER -------- */
 footer{
@@ -212,14 +208,14 @@ footer{
   </ul>
 </nav>
 
-
 <!-- PROJECT -->
 <div class="project">
 
   <!-- VIDEO -->
   <div class="video">
-    <!-- Replace this URL with your real Project 2 embed -->
-    <iframe src="https://player.vimeo.com/video/1144791347"
+    <iframe 
+      src="https://player.vimeo.com/video/1144791347?title=0&byline=0&portrait=0"
+      allow="autoplay; fullscreen; picture-in-picture"
       allowfullscreen>
     </iframe>
   </div>
@@ -229,36 +225,32 @@ footer{
     <h1>Social Media Video</h1>
 
     <p>
-      For this project I produced and edited a short-form vertical video designed
-      for social media distribution, focusing on fast pacing and impactful storytelling.
+      For this project I produced and edited vertical social-first video
+      designed specifically for mobile-first audiences on Instagram and TikTok.
     </p>
 
     <p>
-      I was responsible for the full production flow — creative concept, filming,
-      post-production editing, and formatting for platform-specific delivery.
+      My role covered creative ideation, filming, editing, formatting, and
+      platform optimisation while maintaining visual clarity and narrative flow.
     </p>
   </div>
 
 </div>
 
-
 <!-- PROJECT NAV -->
-<div class="project-nav">
+<div class="nav-projects">
 
-  <!-- PREVIOUS -->
   <a class="nav-link prev" href="project2.html">
     <div class="nav-arrow">←</div>
     <div class="nav-label">Previous project</div>
   </a>
 
-  <!-- NEXT -->
   <a class="nav-link next" href="project4.html">
     <div class="nav-label">Next project</div>
     <div class="nav-arrow">→</div>
   </a>
 
 </div>
-
 
 <footer>
 Copyright © 2025 Carolina Cardoso. All rights reserved.
