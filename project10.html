@@ -6,7 +6,7 @@
 
 <title>Social Media Video — Carolina Cardoso</title>
 <link rel="icon" type="image/png" href="favicon.png">
-<meta name="description" content="Project by Carolina Cardoso — Social Media Video" />
+<meta name="description" content="Project by Carolina Cardoso — YouTube and Web Video" />
 
 <!-- Inter Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,13 +47,13 @@ nav{
 
 nav .name{
   font-weight:700;
-  font-size:20px;                  /* BIGGER impact */
+  font-size:20px;
   letter-spacing:.4px;
 }
 
 nav .name a{
   text-decoration:none;
-  color:var(--next);               /* mint */
+  color:var(--next);
 }
 
 nav .name a:hover{
@@ -76,18 +76,19 @@ nav a{
 
 nav a:hover{ color:var(--accent); }
 
-/* -------- LAYOUT -------- */
+/* -------- PROJECT -------- */
 .project{
-  display:grid;
-  grid-template-columns:380px 1fr;
-  gap:56px;                        /* MORE space between video & text */
-  align-items:start;
-  margin-top:120px;               /* PUSH content down on desktop */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:60px;
+  gap:40px;
 }
 
 /* -------- VIDEO -------- */
 .video{
-  width:100%;
+  width:100vw;           /* full viewport width */
+  max-width:1600px;      /* optional max width */
   aspect-ratio:16/9;
   border-radius:14px;
   overflow:hidden;
@@ -101,6 +102,11 @@ nav a:hover{ color:var(--accent); }
 }
 
 /* -------- TEXT -------- */
+.info{
+  max-width:800px;
+  text-align:center;
+}
+
 .info h1{
   font-size:48px;
   margin:0 0 28px 0;
@@ -112,7 +118,6 @@ nav a:hover{ color:var(--accent); }
   color:var(--text);
   font-size:16px;
   line-height:1.65;
-  max-width:520px;
   margin-bottom:14px;
 }
 
@@ -120,7 +125,7 @@ nav a:hover{ color:var(--accent); }
 .next-project{
   margin-top:72px;
   display:flex;
-  justify-content:flex-end;
+  justify-content:center;
 }
 
 .next-link{
@@ -147,43 +152,27 @@ nav a:hover{ color:var(--accent); }
   line-height:1;
 }
 
-/* -------- MOBILE -------- */
-@media(max-width:900px){
-
-  nav .name{
-    font-size:18px;
-  }
-
-  .project{
-    grid-template-columns:1fr;
-    margin-top:28px;
-    gap:28px;
-  }
-
-  .video{
-    max-width:360px;
-    margin:auto;
-  }
-
-  .info{
-    text-align:center;
-  }
-
-  .info h1{
-    font-size:36px;
-  }
-
-  .next-project{
-    justify-content:center;
-  }
-}
-
 /* -------- FOOTER -------- */
 footer{
   margin-top:80px;
   text-align:center;
   color:var(--muted);
   font-size:13px;
+}
+
+/* -------- MOBILE -------- */
+@media(max-width:900px){
+  .info h1{
+    font-size:36px;
+  }
+
+  .project{
+    gap:28px;
+  }
+
+  .video{
+    width:100%;
+  }
 }
 </style>
 </head>
@@ -209,22 +198,25 @@ footer{
 
   <!-- VIDEO -->
   <div class="video">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/8Lu08tx5odo?si=4uBqu4-DHVmdSfJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/8Lu08tx5odo?si=4uBqu4-DHVmdSfJw"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen></iframe>
   </div>
 
   <!-- TEXT -->
   <div class="info">
-    <h1>Social Media Video</h1>
+    <h1>YouTube and Web Video</h1>
 
     <p>
-      For this project I was responsible for producing and editing vertical
-      social-first video content tailored for Instagram and TikTok audiences.
+      For this project I was responsible for producing and editing horizontal
+      social-first video content for YouTube and social platforms.
     </p>
 
     <p>
-      My role included concept development, scripting, filming, mobile-first
-      editing, and adapting the final piece to platform-specific formats
-      while maintaining clear storytelling and visual cohesion.
+      My role included concept development, scripting, filming, editing, and
+      adapting the final piece while maintaining clear storytelling and visual cohesion.
     </p>
   </div>
 
