@@ -154,6 +154,37 @@ nav a:hover{
   object-fit:cover;
 }
 
+/* ---------- THUMB HOVER OVERLAY ---------- */
+.thumb{
+  position:relative;
+  overflow:hidden;
+}
+
+/* overlay */
+.thumb::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(207, 255, 182, 0.25); /* mint green overlay */
+  opacity:0;
+  transition:opacity .25s ease;
+}
+
+/* hover animation */
+.thumb:hover::after{
+  opacity:1;
+}
+
+/* optional subtle zoom for polish */
+.thumb img{
+  transition:transform .35s ease;
+}
+
+.thumb:hover img{
+  transform:scale(1.04);
+}
+
+  
 /* ---------- SECTIONS ---------- */
 .section{
   margin-bottom:64px;
@@ -291,6 +322,7 @@ function scrollSlider(id, amount){
 
 </body>
 </html>
+
 
 
 
