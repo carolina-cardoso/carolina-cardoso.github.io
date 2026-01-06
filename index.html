@@ -23,7 +23,7 @@
 
   --accent:#7dd3fc;        /* hover blue */
   --next:#cfffb6;          /* GREEN — name + arrows */
-  --section-orange:rgba(255, 120, 80, 0.22); /* subtitles */
+  --section-orange:rgba(255, 120, 80, 1); /* subtitles */
 }
 
 *{box-sizing:border-box}
@@ -170,7 +170,7 @@ nav a:hover{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(255, 120, 80, 1); /* burnt orange overlay */
+  background:rgba(255, 120, 80, 0.22); /* burnt orange overlay */
   opacity:0;
   transition:opacity .25s ease;
 }
@@ -270,7 +270,7 @@ footer{
 <nav>
   <div class="name"></div> <!-- invisible left element -->
   <ul>
-    <li><a href="index.html">Videos</a></li>
+    <li><a href="index.html">Work</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
 </nav>
@@ -344,6 +344,7 @@ function scrollSlider(id, amount){
 
 </body>
 </html>
+
 
 
 
