@@ -20,10 +20,12 @@
   --panel:#101725;
   --text:#ffffff;
   --muted:#aab2c3;
-  --accent:#7dd3fc;
-  --next:#cfffb6; /* verde usado no next project */
-  --brand:rgba(255,120,80,0.22); /* warm red–orange */
+
+  --accent:#7dd3fc;        /* hover blue */
+  --next:#cfffb6;          /* GREEN — name + arrows */
+  --section-orange:rgba(255, 120, 80, 0.22); /* subtitles */
 }
+
 *{box-sizing:border-box}
 
 body{
@@ -195,14 +197,15 @@ nav a:hover{
 
 
 .section h2{
-  margin-bottom:16px;
-  font-size:20px;                 /* slightly bigger */
-  font-weight:600;
-  letter-spacing:0.14em;
+  margin-bottom:18px;
+  font-size:22px;
+  font-weight:700;          /* bold */
   text-transform:uppercase;
-  color:var(--brand);
-  margin-left:50px;               /* aligns with first thumbnail, not arrow */
+  letter-spacing:0;         /* VERY important */
+  color:var(--section-orange);
+  margin-left:50px;         /* aligns with first thumbnail */
 }
+
 
 
 /* ---------- FOOTER ---------- */
@@ -341,6 +344,7 @@ function scrollSlider(id, amount){
 
 </body>
 </html>
+
 
 
 
