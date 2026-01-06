@@ -17,13 +17,12 @@
 <style>
 :root{
   --bg:#000000;
-  --panel:#101725;
   --text:#ffffff;
   --muted:#aab2c3;
 
-  --accent:#7dd3fc;        /* hover blue */
-  --next:#cfffb6;          /* GREEN — name + arrows */
-  --section-orange:rgba(255, 120, 80, 1); /* subtitles */
+  --accent:#7dd3fc;
+  --next:#cfffb6; /* green */
+  --section-orange:rgba(255, 120, 80, 1);
 }
 
 *{box-sizing:border-box}
@@ -42,19 +41,17 @@ body{
 }
 
 /* ---------- NAV ---------- */
-nav {
-  display: flex;
-  justify-content: space-between; /* creates equal space on left and right */
-  align-items: flex-start;
-  margin-bottom: 32px; /* same as Project 1 */
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:32px;
 }
 
-
-  
 nav ul{
   list-style:none;
   display:flex;
-  gap:24px;
+  gap:20px;
   padding:0;
   margin:0;
 }
@@ -62,7 +59,7 @@ nav ul{
 nav a{
   color:white;
   text-decoration:none;
-  font-size:30px;
+  font-size:14px;        /* DISCREET */
   font-weight:500;
 }
 
@@ -70,28 +67,25 @@ nav a:hover{
   color:var(--accent);
 }
 
-/* ---------- NOME CENTRAL ---------- */
+/* ---------- NAME ---------- */
 .header-name{
   text-align:center;
-  font-family:'Inter', sans-serif;
   font-weight:700;
-  font-size:60px;
-  letter-spacing:-0.02em; /* modern, editorial */
-  color:var(--next); /* or your warm orange if you prefer */
-  margin-bottom:8px;
+  font-size:88px;        /* MUCH BIGGER */
+  letter-spacing:-0.03em;
+  color:var(--next);
+  margin-bottom:12px;
 }
 
 .header-subtitle{
   text-align:center;
-  font-family:'Inter', sans-serif;
   font-weight:500;
-  font-size:15px;
-  letter-spacing:0.08em;
+  font-size:22px;        /* BIGGER than sections */
+  letter-spacing:0.04em;
   text-transform:uppercase;
   color:white;
-  margin-bottom:48px;
+  margin-bottom:72px;
 }
-
 
 /* ---------- SLIDERS ---------- */
 .slider{
@@ -100,13 +94,10 @@ nav a:hover{
   overflow-x:auto;
   padding:16px 6px;
   scroll-behavior:smooth;
-
   scrollbar-width:none;
   -ms-overflow-style:none;
 }
-.slider::-webkit-scrollbar{
-  display:none;
-}
+.slider::-webkit-scrollbar{ display:none; }
 
 .slider-wrapper{
   display:flex;
@@ -134,78 +125,49 @@ nav a:hover{
 }
 
 .thumb{
-  text-decoration:none;
+  position:relative;
   display:block;
   flex:0 0 auto;
   border-radius:12px;
-  background:#000;
   overflow:hidden;
 }
 
-.thumb.vertical{
-  width:190px;
-  height:338px;
-}
-
-.thumb.horizontal{
-  width:320px;
-  height:180px;
-}
+.thumb.vertical{ width:190px; height:338px; }
+.thumb.horizontal{ width:320px; height:180px; }
 
 .thumb img{
   width:100%;
   height:100%;
   object-fit:cover;
+  transition:transform .35s ease;
 }
 
-/* ---------- THUMB HOVER OVERLAY ---------- */
-.thumb{
-  position:relative;
-  overflow:hidden;
-}
-
-/* overlay */
 .thumb::after{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(255, 120, 80, 0.22); /* burnt orange overlay */
+  background:rgba(255,120,80,0.22);
   opacity:0;
-  transition:opacity .25s ease;
+  transition:.25s ease;
 }
 
-/* hover animation */
-.thumb:hover::after{
-  opacity:1;
-}
+.thumb:hover::after{ opacity:1; }
+.thumb:hover img{ transform:scale(1.04); }
 
-/* optional subtle zoom for polish */
-.thumb img{
-  transition:transform .35s ease;
-}
-
-.thumb:hover img{
-  transform:scale(1.04);
-}
-
-  
 /* ---------- SECTIONS ---------- */
 .section{
-  margin-bottom:96px; /* more breathing room */
+  margin-bottom:112px;   /* MORE separation */
 }
-
 
 .section h2{
   margin-bottom:18px;
-  font-size:22px;
-  font-weight:700;          /* bold */
+  font-size:20px;        /* SMALLER than subtitle */
+  font-weight:700;
   text-transform:uppercase;
-  letter-spacing:0;         /* VERY important */
+  letter-spacing:0;
   color:var(--section-orange);
-  margin-left:50px;         /* aligns with first thumbnail */
+  margin-left:50px;
 }
-
-
 
 /* ---------- FOOTER ---------- */
 footer{
@@ -215,36 +177,30 @@ footer{
   font-size:13px;
 }
 
-/* ---------- RESPONSIVO ---------- */
+/* ---------- MOBILE ---------- */
 @media(max-width:900px){
+
+  nav a{
+    font-size:13px;
+  }
+
+  .header-name{
+    font-size:48px;
+  }
+
+  .header-subtitle{
+    font-size:16px;
+    margin-bottom:40px;
+  }
+
   .section h2{
     margin-left:0;
-    text-align:left;
-    padding-left:6px; /* subtle alignment */
-    font-size:18px;
+    padding-left:6px;
+    font-size:16px;
   }
 
   .section{
     margin-bottom:72px;
-  }
-}
-
-  .header-subtitle{
-    font-size:14px;
-    margin-bottom:32px;
-  }
-
-  nav{
-    justify-content:flex-end;
-  }
-
-  nav ul{
-    gap:16px;
-  }
-
-  .slider-arrow{
-    width:32px;
-    height:32px;
   }
 
   .thumb.vertical{
@@ -256,7 +212,6 @@ footer{
     width:250px;
     height:140px;
   }
-  
 }
 </style>
 </head>
@@ -265,64 +220,46 @@ footer{
 
 <div class="wrapper">
 
-<!-- ---------- NAV ---------- -->
 <nav>
-  <div class="name"></div> <!-- invisible left element -->
+  <div></div>
   <ul>
     <li><a href="index.html">Work</a></li>
     <li><a href="about.html">About</a></li>
   </ul>
 </nav>
 
-
-
-<!-- ---------- NOME CENTRAL ---------- -->
 <div class="header-name">Carolina Cardoso</div>
-<div class="header-subtitle">VIDEO PRODUCER AND JOURNALIST BASED IN BRUSSELS</div>
+<div class="header-subtitle">Video Producer and Journalist Based in Brussels</div>
 
-<!-- ---------- VERTICAL VIDEOS ---------- -->
+<!-- Vertical videos -->
 <section class="section">
 <h2>Vertical videos</h2>
 
 <div class="slider-wrapper">
-
 <button class="slider-arrow" onclick="scrollSlider('vertical',-260)">❮</button>
 
 <div class="slider" id="vertical">
   <a href="project1.html" class="thumb vertical"><img src="thumb-v1.jpg"></a>
   <a href="project2.html" class="thumb vertical"><img src="thumb-v2.jpg"></a>
-  <a href="project3.html" class="thumb vertical"><img src="thumb-v3.png.png"></a>
-  <a href="project4.html" class="thumb vertical"><img src="thumb-v4.png.png"></a>
-  <a href="project5.html" class="thumb vertical"><img src="thumb-v5.png.png"></a>
-  <a href="project6.html" class="thumb vertical"><img src="thumb-v6.png.png"></a>
-  <a href="project7.html" class="thumb vertical"><img src="thumb-v7.jpg.jpg"></a>
-  <a href="project8.html" class="thumb vertical"><img src="thumb-v8.jpg.jpg"></a>
-  <a href="project9.html" class="thumb vertical"><img src="thumb-v9.jpg"></a>
 </div>
 
 <button class="slider-arrow" onclick="scrollSlider('vertical',260)">❯</button>
-
 </div>
 </section>
 
-<!-- ---------- HORIZONTAL VIDEOS ---------- -->
+<!-- Horizontal videos -->
 <section class="section">
 <h2>Horizontal videos</h2>
 
 <div class="slider-wrapper">
-
 <button class="slider-arrow" onclick="scrollSlider('horizontal',-360)">❮</button>
 
 <div class="slider" id="horizontal">
   <a href="project10.html" class="thumb horizontal"><img src="thumb-h1.jpg"></a>
   <a href="project11.html" class="thumb horizontal"><img src="thumb-h2.jpg.jpg"></a>
-  <a href="project12.html" class="thumb horizontal"><img src="thumb-h4.jpg.jpg"></a>
-  <a href="project13.html" class="thumb horizontal"><img src="thumb-h5.jpg"></a>
-  <a href="project14.html" class="thumb horizontal"><img src="thumb-h6.jpg"></a>
 </div>
 
 <button class="slider-arrow" onclick="scrollSlider('horizontal',360)">❯</button>
-
 </div>
 </section>
 
@@ -334,25 +271,9 @@ Copyright © 2025 Carolina Cardoso. All rights reserved.
 
 <script>
 function scrollSlider(id, amount){
-  document.getElementById(id).scrollBy({
-    left: amount,
-    behavior:"smooth"
-  });
+  document.getElementById(id).scrollBy({ left: amount, behavior:"smooth" });
 }
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
